@@ -1,33 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void viewAvailableOptions(){
+	printf("\nTrain No:101,Destination:Kigali,Available seats:30,Price=5000Rwf");
+	printf("\nTrain No:102,Destination:Musanze,Available seats:25,Price=4500Rwf");
+	printf("\nTrain No:103,Destination:Rubavu,Available seats:15,Price=3500Rwf");
+	printf("\nTrain No:104,Destinafion:Nyundo,Available seats:20,Price=4000Rwf");
+	printf("\nTrain No:105,Destination:Huye,Available seats:10,Price=3000Rwf");
+}
 
 int main() {
-	int choice;
-	printf("Choose an option: \n");
-	printf("\n1.View available trains(We'll implement this later!) ");
-	printf("\n2.Book tickets(we'll implement this later!) ");
-	printf("\n3.Cancel tickets(We'll implement this later!)" );
-	printf("\n4.Search by destination(we'll implement this later!)" );
-	printf("\n5.Exit");
-    printf("\nEnter your choice: ");
-	scanf("%d",&choice);
+	printf("Available trains: ");
 	
-	switch(choice){
-		case 1:
-			printf("View available train feature coming soon!");
-			break;
-		case 2:
-			printf("Book tickets coming out this summer");
-			break;
-		case 3:
-			printf("Cancel tickets that were previously booked");
-			break;
-		case 4:
-			printf("Search by destination all over the world");
-			break;
-		case 5:
-			break;
-	}
+    int Haft[5];
+    char Dest[5];
+    int Avail[5];
+	int Tik[5];
+    
+	viewAvailableOptions();
+
+	
+	
 	return 0;
 }
