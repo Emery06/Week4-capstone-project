@@ -1,25 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void viewAvailableOptions(){
-	printf("\nTrain No:101,Destination:Kigali,Available seats:30,Price=5000Rwf");
-	printf("\nTrain No:102,Destination:Musanze,Available seats:25,Price=4500Rwf");
-	printf("\nTrain No:103,Destination:Rubavu,Available seats:15,Price=3500Rwf");
-	printf("\nTrain No:104,Destinafion:Nyundo,Available seats:20,Price=4000Rwf");
-	printf("\nTrain No:105,Destination:Huye,Available seats:10,Price=3000Rwf");
-}
-
-int main() {
-	printf("Available trains: ");
+int main(){
+	typedef struct{
+		int Train_No;
+		char Desto[30];
+		int Avo;
+		int Pricey;
+	}Transport;
 	
-    int Haft[5];
-    char Dest[5];
-    int Avail[5];
-	int Tik[5];
+	Transport transports[]={
+		{101,"Kigali",30,5000},
+		{102,"Musanze",25,4500},
+		{103,"Rubavu",15,3500},
+		{104,"Nyundo",20,4000},
+	    {105,"Huye",10,3000}
+	};
+	  printf("View Available options\n");
+	int index;
+	  for(index=0 ; index<4; index++ ){
+	  
+	  	printf("Train No:%d,Destination:%s,Available seats:%d,Price:%d\n",transports[index].Train_No,transports[index].Desto,transports[index].Avo,transports[index].Pricey);
+	  }
+	
     
-	viewAvailableOptions();
-
-	
-	
-	return 0;
+    return 0;
 }
+
