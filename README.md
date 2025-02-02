@@ -1,1 +1,2 @@
 # Week4-capstone-project
+This whole past week was a step by step process into creating a program that could run a Railway reservation system.We had two create functions that would allow,say potential passengers,to onboard or leave a given train.My codes were set to always run until the user chooses to Search by destination by the help of "do while".Moreover my program can update seats according to how many were booked or cancelled. 
