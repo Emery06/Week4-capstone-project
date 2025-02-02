@@ -42,6 +42,7 @@ void bookTickets() {
                 transports[i].Avo -= seatsToBook;
                 printf("%d tickets booked successfully for Train No: %d\n", seatsToBook, trainNumber);
                 printf("Remaining seats: %d\n", transports[i].Avo);
+                return;
             } else {
                 printf("Not enough seats available!\n");
             }
@@ -70,15 +71,29 @@ void cancelTickets() {
     }
     printf("Invalid train number!\n");
 }
+void searchTrains() {
+	char placeToGo[30];
+	printf("Enter destination");
+	scanf("%29s",placeToGo);
+	printf("Search results: ");
+	int index;
+	for(index=0;index<4;index++){
+		if(strcmp(placeToGo, transports[index].Desto) == 0)
+		printf("Train No: %d, Destination: %s, Available seats: %d, Price: %d Rwf\n", transports[index].Train_No, transports[index].Desto, transports[index].Avo, transports[index].Pricey);
+        return; 
+	}
+		printf("No matching destination!");
+}
 
 int main() {
-    int choice;
+	int choice;
 
-        printf("\n===== Choose an option =====\n");
+    do{  printf("\n===== Choose an option :\n");
         printf("1. View Available Trains\n");
         printf("2. Book Tickets\n");
         printf("3. Cancel Tickets\n");
-        printf("4. Search by destination");
+        printf("4. Search by destination\n");
+        printf("5.Exit! \n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -93,11 +108,13 @@ int main() {
                 cancelTickets();
                 break;
             case 4:
-                printf("Welcome!");
+                searchTrains();
                 break;
             default:
                 printf("Invalid choice! Please try again.\n");
         }
+    }while(choice!=4);
+    
     return 0; 
 
 }
